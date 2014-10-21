@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FontEasyRead</string>
+
+    <string name="back_white">White</string>
+    <string name="back_black">Black</string>
+
+</resources>
