@@ -1,11 +1,8 @@
 package com.example.FontEasyRead;
 
 import android.app.Activity;
-import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.graphics.drawable.BitmapDrawable;
+import android.content.Intent;
+
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -13,19 +10,17 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.Settings;
-import android.text.Html;
+
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.*;
 import au.com.bytecode.opencsv.CSVWriter;
-import org.w3c.dom.Text;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.concurrent.Semaphore;
 
 
 public class MyActivity extends Activity implements
@@ -44,7 +39,7 @@ public class MyActivity extends Activity implements
      *
      *
      */
-
+    //注意 修改字型檔 須同步更改MyFontShow.java
     private String[] mTypefaceTable = {
         "fonts/gjxh00l-noh.ttf",        //Light font
         "fonts/gjxh00m_noh.ttf",
@@ -65,12 +60,13 @@ public class MyActivity extends Activity implements
     };
     //add by v1.1.0 end
 
-
+    /*
     public final static int DEFAULT_FONT_SIZE = 24;
     public final static int MAX_FONT_SIZE = 72;
     public final static int MIN_FONT_SIZE = 8;
     private static int mSize = DEFAULT_FONT_SIZE;
-
+    */
+    /*
     private final static boolean IsEnableUserFont = true;
 
     private static final int MAX_AVAILABLE = 100;
@@ -79,7 +75,7 @@ public class MyActivity extends Activity implements
     private ArrayList<Typeface> mTypefaces = new ArrayList<Typeface>(
             mTypefaceTable.length
             );
-
+    */
 
     //private Typeface typefaceWeight;        //add by v1.0.1, mask by v1.1.0
 
@@ -95,12 +91,10 @@ public class MyActivity extends Activity implements
     private TextView txt_mSeekBarTitle;
     private TextView txt_defaultLight_note;
 
-    private Button btn_fontWidthAdd;
-    private Button btn_fontWidthSub;
     private Button btn_background;
     private Button btn_saveInformation;
 
-    private RelativeLayout mApp;
+    //private RelativeLayout mApp;
 
     private SensorManager mgr;
     private Sensor sensor;
@@ -116,21 +110,17 @@ public class MyActivity extends Activity implements
     // add by v1.1.0 end
 ///!!!!!
 
-    private PopupWindow mPopupWindow;// 浮动窗口
+    private Button btn_addFontWeight;
+    private Button btn_subFontWeight;
 
-    private Button btn_addSize;
-    private Button btn_subSize;
-    private ImageButton btn_nextWeight;
-    private ImageButton btn_backWeight;
+    private TextView txt_showFontWeight;
 
-    private TextView txt_fontSize;
-    private TextView txt_fontWeight;
+    private Button btn_show;
 
-    private Button btn_font_text1;
-    private Button btn_font_text2;
-    private Button btn_font_text3;
+    private int outFontWeight;
+    private boolean outBackground;
 
-    private TextView inputTextView;
+    //private TextView inputTextView;
 
 ///!!!!!
     /* mask by v1.1.0 begin
@@ -141,7 +131,7 @@ public class MyActivity extends Activity implements
     private static String filePath = Environment.getExternalStorageDirectory().getPath() +
             "/texts/FontEasyRead_example.html";
     mask by v1.1.0 end*/
-
+/*
     //Typeface initializer
     public void typefacesInit(AssetManager am) {
 
@@ -257,7 +247,8 @@ public class MyActivity extends Activity implements
             }
         }
     }
-
+*/
+/*
     //private void loadFile(final String path) {        //mask by v1.0.1
     private void loadFile() {       //add by v1.0.1
         //File file = new File(path);       //mask by v1.0.1
@@ -286,11 +277,9 @@ public class MyActivity extends Activity implements
 
         //設定顯示內容
         //txt_read.setText(Html.fromHtml(text));
-//        txt_read1.setText(Html.fromHtml(text));
-//        txt_read2.setText(Html.fromHtml(text));
-//        txt_read3.setText(Html.fromHtml(text));
     }
-
+*/
+    /* mask by v1.1.0 begin
     private synchronized void setFontSize(TextView showTitle,TextView readText,int size) {
         String sizeTitle;
         if (size == MAX_FONT_SIZE) {
@@ -311,7 +300,7 @@ public class MyActivity extends Activity implements
         mSize = size;
 
     }
-    /* mask by v1.1.0 begin
+
     private ZoomControls.OnClickListener mFontSizeAddListener = new ZoomControls.OnClickListener() {
 
         @Override
@@ -363,26 +352,24 @@ public class MyActivity extends Activity implements
                 //code for save
                 btn_background.setText("White");
                 txt_background.setText(R.string.back_white);
-                mApp.setBackgroundColor(Color.WHITE);
-                //txt_read.setTextColor(Color.BLACK);       mask by v1.1.5
-//                txt_read1.setTextColor(Color.BLACK);
-//                txt_read2.setTextColor(Color.BLACK);
-//                txt_read3.setTextColor(Color.BLACK);
+                //mApp.setBackgroundColor(Color.WHITE);     //mask by v1.1.5
+                //txt_read.setTextColor(Color.BLACK);       //mask by v1.1.5
+
+                outBackground = true;       //傳回背景設定 (true:黑, false:白)      //add by v1.1.5
             }
             else{
                 //code for edit
                 btn_background.setText("Black");
                 txt_background.setText(R.string.back_black);
-                mApp.setBackgroundColor(Color.BLACK);
-                //txt_read.setTextColor(Color.WHITE);
-//                txt_read1.setTextColor(Color.WHITE);
-//                txt_read2.setTextColor(Color.WHITE);
-//                txt_read3.setTextColor(Color.WHITE);
+                //mApp.setBackgroundColor(Color.BLACK);     //mask by v1.1.5
+                //txt_read.setTextColor(Color.WHITE);       //mask by v1.1.5
+
+                outBackground = false;      //傳回背景設定 (true:黑, false:白)      //add by v1.1.5
             }
         }
     };
 
-    private Button.OnClickListener mFontWidthAdd = new Button.OnClickListener() {
+    private Button.OnClickListener mAddFontWeight = new Button.OnClickListener() {
 
         @Override
         public void onClick(View v) {
@@ -391,19 +378,23 @@ public class MyActivity extends Activity implements
 
             count=count%mTypefaceTable.length;
 
-            btn_fontWidthSub.setEnabled(true);
-            //txt_read.setTypeface(mTypefaces.get(count));      暫時關閉
+            btn_subFontWeight.setEnabled(true);
+            //txt_read.setTypeface(mTypefaces.get(count));      //mask by v1.1.5
+
+            outFontWeight = count;      //傳送typeface        //add by v1.1.5
+
             txt_fontWidth.setText(fontWightName[count]);
+            txt_showFontWeight.setText(fontWightName[count]);
 
             if (count == mTypefaceTable.length - 1){
-                btn_fontWidthAdd.setEnabled(false);
+                btn_addFontWeight.setEnabled(false);
             }
 
 
         }
     };
 
-    private Button.OnClickListener mFontWidthSub = new Button.OnClickListener() {
+    private Button.OnClickListener mSubFontWeight = new Button.OnClickListener() {
 
         @Override
         public void onClick(View v) {
@@ -413,12 +404,16 @@ public class MyActivity extends Activity implements
             if (count<0) count=count+mTypefaceTable.length;
             count=count%mTypefaceTable.length;
 
-            btn_fontWidthAdd.setEnabled(true);
-            //txt_read.setTypeface(mTypefaces.get(count));      暫時關閉
+            btn_addFontWeight.setEnabled(true);
+            //txt_read.setTypeface(mTypefaces.get(count));      //mask by v1.1.5
+
+            outFontWeight = count;      //傳送typeface        //add by v1.1.5
+
             txt_fontWidth.setText(fontWightName[count]);
+            txt_showFontWeight.setText(fontWightName[count]);
 
             if (count <= 0) {
-                btn_fontWidthSub.setEnabled(false);
+                btn_subFontWeight.setEnabled(false);
             }
 
         }
@@ -439,7 +434,7 @@ public class MyActivity extends Activity implements
 
     /*
     *      浮動視窗功能設定
-    */
+
     private void popupWindowInit() {
 
         //自訂義浮動視窗layout
@@ -467,9 +462,9 @@ public class MyActivity extends Activity implements
         btn_backWeight.setOnClickListener(mBtnBackWeightListener);
 
     }
-    /*
+
      *      浮動視窗物件監聽器
-     */
+
     private Button.OnClickListener mBtnAddSizeListener = new Button.OnClickListener() {
 
         @Override
@@ -537,7 +532,25 @@ public class MyActivity extends Activity implements
             mPopupWindow.showAsDropDown(v);
         }
     };
+    */
 
+    private Button.OnClickListener mFontShow = new Button.OnClickListener(){
+
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MyActivity.this,MyFontShow.class);
+
+            //new一個Bundle物件，並將要傳遞的資料傳入
+            Bundle bundle = new Bundle();
+            bundle.putInt("fontWeight",outFontWeight );//傳遞Int
+            bundle.putBoolean("background",outBackground);//傳遞Boolean
+
+            //將Bundle物件傳給intent
+            intent.putExtras(bundle);
+
+            startActivity(intent);
+        }
+    };
 
     private SeekBar.OnSeekBarChangeListener mSeekBarListener = new SeekBar.OnSeekBarChangeListener() {
 
@@ -715,20 +728,18 @@ public class MyActivity extends Activity implements
         //開啟自動調整亮度
         startAutoBrightness();
 
-        Typeface tf = Typeface.createFromAsset(getAssets(), mTypefaceTable[0]);      //if use mTypeface[0] will be error
+        //Typeface tf = Typeface.createFromAsset(getAssets(), mTypefaceTable[0]);      //if use mTypeface[0] will be error
         //txt_read.setTypeface(tf);
-//        txt_read1.setTypeface(tf);
-//        txt_read2.setTypeface(tf);
-//        txt_read3.setTypeface(tf);
 
         //啟動觸碰捲動
         //txt_read.setMovementMethod(ScrollingMovementMethod.getInstance());        文章太長不會斷行
 
         txt_fontWidth.setText(fontWightName[0]);        //add by v1.1.0
+        txt_showFontWeight.setText(fontWightName[0]);        //add by v1.1.5
         txt_background.setText(R.string.back_white);        //add by v1.1.0
 
         //浮動視窗功能初始化
-        popupWindowInit();
+        //popupWindowInit();
 
     }
 
@@ -820,7 +831,7 @@ public class MyActivity extends Activity implements
     private void findView(){
 
         //add by v1.1.0 begin
-        mApp = (RelativeLayout)findViewById(R.id.mApp);
+        //mApp = (RelativeLayout)findViewById(R.id.mApp);
 
         //txt_read = (TextView)findViewById(R.id.txt_show_article);
 //        txt_read1 = (TextView)findViewById(R.id.txt_show_article1);
@@ -832,17 +843,14 @@ public class MyActivity extends Activity implements
         //txt_outLux = (TextView)findViewById(R.id.txt_show_outLux);        //mask by v1.1.1
         txt_mSeekBarTitle = (TextView)findViewById(R.id.txt_title_light);       //add by v1.1.1
         txt_defaultLight_note = (TextView)findViewById(R.id.txt_not_defaultLight);      //add by v1.1.1
+        txt_showFontWeight = (TextView)findViewById(R.id.txt_showFontWeight);
 
 
         btn_background = (Button)findViewById(R.id.btn_background);
-        btn_fontWidthAdd = (Button)findViewById(R.id.btn_fontWidthAdd);
-        btn_fontWidthSub = (Button)findViewById(R.id.btn_fontWidthSub);
+        btn_addFontWeight = (Button)findViewById(R.id.btn_addFontWeight);
+        btn_subFontWeight = (Button)findViewById(R.id.btn_subFontWeight);
         btn_saveInformation = (Button)findViewById(R.id.btn_save);
-        //add by v1.1.5 begin
-//        btn_font_text1 = (Button)findViewById(R.id.font_text1_options);
-//        btn_font_text2 = (Button)findViewById(R.id.font_text2_options);
-//        btn_font_text3 = (Button)findViewById(R.id.font_text3_options);
-        //add by v1.1.5 end
+
         mSeekBar = (SeekBar)findViewById(R.id.seekBar);
         //add by v1.1.0 end
         mTogBtn = (ToggleButton)findViewById(R.id.toggleButton);        //add by 1.1.1
@@ -852,6 +860,8 @@ public class MyActivity extends Activity implements
         fontSize = (ZoomControls)findViewById(R.id.zoomControls);
         lightValue = (TextView)findViewById(R.id.textView3);
         mask by v1.1.0 end*/
+
+        btn_show = (Button)findViewById(R.id.btn_show);
     }
 
     private void listener() {
@@ -862,19 +872,17 @@ public class MyActivity extends Activity implements
 
         //add by v1.1.0 begin
         btn_background.setOnClickListener(mBackgroundListener);
-//        btn_fontWidthAdd.setOnClickListener(mFontWidthAdd);
-//        btn_fontWidthSub.setOnClickListener(mFontWidthSub);
+        btn_addFontWeight.setOnClickListener(mAddFontWeight);
+        btn_subFontWeight.setOnClickListener(mSubFontWeight);
         btn_saveInformation.setOnClickListener(mSaveInformation);
 
         mSeekBar.setOnSeekBarChangeListener(mSeekBarListener);
         //add by v1.1.0 end
         mTogBtn.setOnClickListener(mTogBtnListener);        //add by v1.1.1
 
-        //add by v1.1.5 begin
-//        btn_font_text1.setOnClickListener(mFontText1Listener);
-//        btn_font_text2.setOnClickListener(mFontText2Listener);
-//        btn_font_text3.setOnClickListener(mFontText3Listener);
-        //add by v1.1.5 end
+        btn_show.setOnClickListener(mFontShow);
+
+
     }
 
     @Override
@@ -912,7 +920,7 @@ public class MyActivity extends Activity implements
         setContentView(R.layout.test_guimother);
 
         //初始化Typeface
-        typefacesInit(getAssets());       //mask by v1.0.1 begin
+        //typefacesInit(getAssets());       //mask by v1.0.1 begin
 
         findView();
 
@@ -921,19 +929,8 @@ public class MyActivity extends Activity implements
         init();
 
         //loadFile(filePath);       //mask by v1.0.1
-        loadFile();     //add by v1.0.1
+        //loadFile();     //add by v1.0.1
 
-
-/*
-        mButton = (Button) findViewById(R.id.font_text1_options);
-        mButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                mPopupWindow.showAsDropDown(v);
-            }
-        });
-*/
     }
 
     @Override
