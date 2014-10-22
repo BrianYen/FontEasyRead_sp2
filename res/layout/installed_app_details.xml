@@ -21,7 +21,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
-    android:scrollbarStyle="@integer/preference_scrollbar_style">
+    android:scrollbarStyle="@integer/preference_scrollbar_style" android:id="@+id/app_show">
 
     <LinearLayout
         android:id="@+id/all_details"
@@ -50,9 +50,6 @@
                 android:id="@+id/control_buttons_panel"/>
 
             <!-- Force stop and uninstall buttons -->
-            <include
-                layout="@layout/two_buttons_panel"
-                android:id="@+id/more_control_buttons_panel"/>
 
             <!-- Ban notifications for this package -->
             <CheckBox android:id="@+id/notification_switch"
@@ -60,14 +57,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:layout_marginTop="4dip"
-                android:text="@string/app_notifications_switch_label" />
+                android:text="@string/app_notifications_switch_label" android:checked="true"/>
 
         </LinearLayout>
 
         <TextView
             style="?android:attr/listSeparatorTextViewStyle"
             android:layout_marginTop="8dip"
-            android:text="@string/storage_label" />
+            android:text="@string/storage_label" android:id="@+id/storage_title"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -107,7 +104,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:maxLines="1" />
+                    android:maxLines="1" android:text="30.0 MB"/>
             </LinearLayout>
 
             <LinearLayout
@@ -142,7 +139,7 @@
                     android:paddingTop="6dip"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:maxLines="1" />
+                    android:maxLines="1" android:text="30.0 MB"/>
             </LinearLayout>
 
             <LinearLayout
@@ -177,7 +174,7 @@
                     android:paddingTop="6dip"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:maxLines="1" />
+                    android:maxLines="1" android:text="0.00 B"/>
             </LinearLayout>
 
             <LinearLayout
@@ -213,7 +210,7 @@
                     android:paddingTop="6dip"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:maxLines="1" />
+                    android:maxLines="1" android:text="0.00 B"/>
             </LinearLayout>
 
             <LinearLayout
@@ -248,12 +245,12 @@
                     android:paddingTop="6dip"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:maxLines="1" />
+                    android:maxLines="1" android:text="0.00 B"/>
             </LinearLayout>
 
             <!-- Clear data and install location buttons  -->
             <include
-                layout="@layout/two_buttons_panel"
+                layout="@layout/two_buttons_panel2"
                 android:id="@+id/data_buttons_panel"/>
 
         </LinearLayout>
@@ -285,7 +282,7 @@
                     android:maxLines="1"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:paddingTop="6dip"
-                    android:gravity="center_vertical" />
+                    android:gravity="center_vertical" android:id="@+id/cache_child"/>
                 <ImageView
                     android:src="@drawable/dotted_line_480px"
                     android:layout_width="0dip"
@@ -303,7 +300,7 @@
                     android:paddingTop="6dip"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:maxLines="1" />
+                    android:maxLines="1" android:text="10.0 KB"/>
             </LinearLayout>
 
             <LinearLayout
@@ -339,7 +336,7 @@
             android:layout_marginTop="8dip"
             android:text="@string/auto_launch_label" />
 
-        <RelativeLayout 
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -350,7 +347,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="6dip" />
+                android:paddingTop="6dip" android:text="@string/default_msg"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -372,41 +369,11 @@
                     android:layout_width="120dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.4"
-                    android:text="@string/clear_activities" />
+                    android:text="@string/clear_activities" android:enabled="false"/>
             </LinearLayout>
         </RelativeLayout>
 
         <!-- Screen compatibility section -->
-        <LinearLayout android:id="@+id/screen_compatibility_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-            <TextView
-                style="?android:attr/listSeparatorTextViewStyle"
-                android:layout_marginTop="8dip"
-                android:text="@string/screen_compatibility_label" />
-
-            <TextView android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_alignParentStart="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="6dip"
-                android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-                android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-                android:text="@string/screen_compatibility_text"/>
-            <CheckBox android:id="@+id/ask_compatibility_cb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dip"
-                android:layout_gravity="start"
-                android:text="@string/ask_compatibility" />
-            <CheckBox android:id="@+id/enable_compatibility_cb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dip"
-                android:layout_gravity="start"
-                android:text="@string/enable_compatibility" />
-        </LinearLayout>
 
         <!-- Permissions section -->
         <LinearLayout
@@ -417,10 +384,9 @@
             <TextView
                 style="?android:attr/listSeparatorTextViewStyle"
                 android:layout_marginTop="8dip"
-                android:text="@string/permissions_label" />
+                android:text="@string/permissions_label" android:id="@+id/permiss_title"/>
             <TextView android:id="@+id/security_settings_billing_desc"
                 android:text="@string/security_settings_billing_desc"
-                android:textColor="#ffffb060"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:paddingTop="6dip"
                 android:paddingBottom="6dip"
@@ -431,27 +397,30 @@
             <LinearLayout
                 android:id="@+id/security_settings_billing_list"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/security_settings_premium_sms_desc" />
-                <Spinner
-                    android:id="@+id/security_settings_premium_sms_list"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:spinnerMode="dropdown" />
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+                <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:id="@+id/imageView2" android:src="@drawable/test"
+                        android:layout_gravity="center_vertical"
+                        />
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:gravity="center_vertical">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/permiss_1" android:text="@string/inf_sdcrad"
+                            android:paddingBottom="5dp" android:paddingLeft="10dp" android:paddingRight="10dp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/inf_sdcrad2"
+                            android:id="@+id/permiss_2" android:paddingLeft="10dp" android:paddingRight="10dp"/>
+                </LinearLayout>
             </LinearLayout>
-            <TextView android:id="@+id/security_settings_desc"
-                android:text="@string/security_settings_desc"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:paddingTop="6dip"
-                android:paddingBottom="6dip"
-                android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-                android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
             <LinearLayout
                 android:id="@+id/security_settings_list"
                 android:layout_width="match_parent"

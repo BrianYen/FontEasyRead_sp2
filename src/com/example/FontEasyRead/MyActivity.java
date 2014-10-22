@@ -27,6 +27,9 @@ public class MyActivity extends Activity implements
         SensorEventListener {
     /**
 	 *
+     * 2014/10/22   brian   v1.1.6  1.add android UI
+     *                              2.change background button
+     *                              
      * 2014/10/20   brian   v1.1.5  1.change used font
      *                              2.change GUI
      *
@@ -91,7 +94,8 @@ public class MyActivity extends Activity implements
     private TextView txt_mSeekBarTitle;
     private TextView txt_defaultLight_note;
 
-    private Button btn_background;
+    //private Button btn_background;
+    private ToggleButton btn_background;
     private Button btn_saveInformation;
 
     //private RelativeLayout mApp;
@@ -341,16 +345,18 @@ public class MyActivity extends Activity implements
 
         writer.close();
     }
-
+/*
     //add by v1.1.0 begin
     private  Button.OnClickListener mBackgroundListener = new Button.OnClickListener() {
 
         @Override
         public void onClick(View v) {
             String ButtonText = btn_background.getText().toString();
-            if(ButtonText.equals("Black")){
+            Log.d("Arphic Log",ButtonText);
+            if(ButtonText.equals(R.string.back_black)){
+                Log.d("Arphic Log","IN");
                 //code for save
-                btn_background.setText("White");
+                //btn_background.setText(R.string.back_white);
                 txt_background.setText(R.string.back_white);
                 //mApp.setBackgroundColor(Color.WHITE);     //mask by v1.1.5
                 //txt_read.setTextColor(Color.BLACK);       //mask by v1.1.5
@@ -359,7 +365,7 @@ public class MyActivity extends Activity implements
             }
             else{
                 //code for edit
-                btn_background.setText("Black");
+                //btn_background.setText(R.string.back_black);
                 txt_background.setText(R.string.back_black);
                 //mApp.setBackgroundColor(Color.BLACK);     //mask by v1.1.5
                 //txt_read.setTextColor(Color.WHITE);       //mask by v1.1.5
@@ -368,7 +374,21 @@ public class MyActivity extends Activity implements
             }
         }
     };
-
+*/
+    private  ToggleButton.OnClickListener mBackgroundListener = new ToggleButton.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if(btn_background.isChecked()) {
+                txt_background.setText(R.string.back_black);
+                outBackground = false;       //傳回背景設定 (true:白, false:黑)      //add by v1.1.5
+            }
+            // 當按鈕在次按下動作 OFF
+            else {
+                txt_background.setText(R.string.back_white);
+                outBackground = true;      //傳回背景設定 (true:白, false:黑)      //add by v1.1.5
+            }
+        }
+    };
     private Button.OnClickListener mAddFontWeight = new Button.OnClickListener() {
 
         @Override
@@ -627,7 +647,7 @@ public class MyActivity extends Activity implements
         mSeekBar.setVisibility(View.INVISIBLE);
         txt_mSeekBarTitle.setVisibility(View.INVISIBLE);
         txt_defaultLight_note.setVisibility(View.INVISIBLE);
-        txt_defaultLight.setText("AUTO");
+        txt_defaultLight.setText(R.string.light_msg);
         //mTogBtn.setChecked(true);
 
     }
@@ -736,7 +756,7 @@ public class MyActivity extends Activity implements
 
         txt_fontWidth.setText(fontWightName[0]);        //add by v1.1.0
         txt_showFontWeight.setText(fontWightName[0]);        //add by v1.1.5
-        txt_background.setText(R.string.back_white);        //add by v1.1.0
+        //txt_background.setText(R.string.back_black);        //add by v1.1.0
 
         //浮動視窗功能初始化
         //popupWindowInit();
@@ -846,7 +866,8 @@ public class MyActivity extends Activity implements
         txt_showFontWeight = (TextView)findViewById(R.id.txt_showFontWeight);
 
 
-        btn_background = (Button)findViewById(R.id.btn_background);
+        //btn_background = (Button)findViewById(R.id.btn_background);
+        btn_background = (ToggleButton)findViewById(R.id.btn_background);
         btn_addFontWeight = (Button)findViewById(R.id.btn_addFontWeight);
         btn_subFontWeight = (Button)findViewById(R.id.btn_subFontWeight);
         btn_saveInformation = (Button)findViewById(R.id.btn_save);
@@ -917,7 +938,7 @@ public class MyActivity extends Activity implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.main);
-        setContentView(R.layout.test_guimother);
+        setContentView(R.layout.main_sp2);
 
         //初始化Typeface
         //typefacesInit(getAssets());       //mask by v1.0.1 begin

@@ -34,7 +34,7 @@
         android:layout_rowSpan="2"
         android:layout_marginEnd="8dip"
         android:scaleType="centerInside"
-        android:contentDescription="@null" />
+        android:contentDescription="@null" android:src="@android:drawable/sym_def_app_icon"/>
 
     <TextView
         android:id="@+id/app_name"
@@ -45,7 +45,7 @@
         android:singleLine="true"
         android:ellipsize="marquee"
         android:textAppearance="?android:attr/textAppearanceMedium"
-         />
+        android:text="@string/demo_app_name"/>
 
     <CheckBox android:id="@+id/app_on_sdcard"
         android:layout_marginStart="8dip"
@@ -60,7 +60,7 @@
         android:layout_width="0dip"
         android:layout_gravity="fill_horizontal|top"
         android:textAppearance="?android:attr/textAppearanceSmall"
-         />
+        android:text="@string/demo_app_size"/>
 
     <TextView
         android:id="@+id/app_disabled"
