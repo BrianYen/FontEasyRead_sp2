@@ -19,11 +19,11 @@ public class MyFragmentPageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return MyFragment.newInstance(position);
+                return new MyFragment_FontSmall();
             case 1:
-                return MyFragment.newInstance(position);
+                return new MyFragment_FontNormal();
             case 2:
-                return MyFragment.newInstance(position);
+                return new MyFragment_FontLarge();
             default:
                 return null;
         }

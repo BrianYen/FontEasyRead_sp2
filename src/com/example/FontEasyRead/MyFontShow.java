@@ -1,6 +1,5 @@
 package com.example.FontEasyRead;
 
-import android.app.Activity;
 import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -8,14 +7,9 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.*;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.Semaphore;
 
 /**
@@ -87,6 +81,9 @@ public class MyFontShow extends FragmentActivity {
     private Button mBtnLaunchClear;
 
     private CheckBox mCheckBtn;
+
+    public static int inFontWeight;
+    public static boolean inBackground;
 
     //Typeface initializer
     public void typefacesInit(AssetManager am) {
@@ -439,7 +436,7 @@ public class MyFontShow extends FragmentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.installed_app_details_normal);
-        setContentView(R.layout.test);
+        setContentView(R.layout.font_show);
 
         mViewPager = (ViewPager) findViewById(R.id.viewpager);      //add by v1.1.7
 
@@ -448,17 +445,15 @@ public class MyFontShow extends FragmentActivity {
         FragmentManager fm = getSupportFragmentManager();
         //初始化自訂義篩選器
         mAdapter =  new MyFragmentPageAdapter(fm);
-
         //設置篩選器
         mViewPager.setAdapter(mAdapter);
-
         //設定默認主畫面
         mViewPager.setCurrentItem(1);       //normal
 
 
 
         //findView
-        findView();
+//        findView();
 
         //初始化Typeface
         //typefacesInit(getAssets());       //mask by v1.0.1 begin
@@ -467,14 +462,14 @@ public class MyFontShow extends FragmentActivity {
 
         //接收設定資料
         Bundle bundle = getIntent().getExtras();
-        int inFontWeight = bundle.getInt("fontWeight");
-        boolean inBackground = bundle.getBoolean("background");
+        inFontWeight = bundle.getInt("fontWeight");
+        inBackground = bundle.getBoolean("background");
 
         //讀取檔案
         //loadFile();       //mask by v1.1.5
 
         //更改背景
-        backgroundColorControl(inBackground);
+        //backgroundColorControl(inBackground);
 
         //更改font typeface
 //        fontTypefaceControl(inFontWeight);

@@ -3,34 +3,23 @@ package com.example.FontEasyRead;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.widget.*;
 
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * 用于创建Fragment对象，作为ViewPager的叶片
- * @author ZHF
+ * 創建Fragment對象，作為ViewPager的分頁
+ * 使用於 Font Size Large
  *
  */
 
-public class MyFragment extends Fragment {
+public class MyFragment_FontLarge extends Fragment {
+    private View view;
 
-    List<View> viewList;
+    private ScrollView mLayout;
 
-    private View viewFontSmall,viewFontNormal,viewFontLarge;
-
-    private int mNum; //頁碼
-
-    private RelativeLayout mLayout;
     private TextView mTxtAppName;
     private TextView mTxtAppSize;
     private TextView mTxtStorageTitle;
@@ -62,21 +51,24 @@ public class MyFragment extends Fragment {
     private Button mBtnLaunchClear;
 
     private CheckBox mCheckBtn;
-
-    public static MyFragment newInstance(int num) {
-        MyFragment fragment = new MyFragment();
+    /*
+    public static MyFragment_FontNormal newInstance(int num) {
+        MyFragment_FontNormal fragment = new MyFragment_FontNormal();
         // Supply num input as an argument.
         Bundle args = new Bundle();
         args.putInt("num", num);
         fragment.setArguments(args);
         return fragment;
     }
+    */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    /*
         //取得頁碼
         mNum = getArguments() != null ? getArguments().getInt("num") : 1;
-
+        Log.d("Arphic Log", "Large" + String.valueOf(mNum));
+    */
     }
     /**为Fragment加载布局时调用**/
     @Override
@@ -88,53 +80,49 @@ public class MyFragment extends Fragment {
         tv.setText("fragment+" + mNum);
         */
         //指向畫面位址
-        viewFontSmall = inflater.inflate(R.layout.installed_app_details_small, null);
-        viewFontNormal = inflater.inflate(R.layout.installed_app_details_normal, null);
-        viewFontLarge = inflater.inflate(R.layout.installed_app_details_large, null);
-        //添加畫面資料
-        viewList = new ArrayList<View>();
-        viewList.add(viewFontSmall);
-        viewList.add(viewFontNormal);
-        viewList.add(viewFontLarge);
+        view = inflater.inflate(R.layout.installed_app_details_large, null);
 
-        findViewSmall();
+        findView();
 
-        return viewList.get(mNum);
+        backgroundColorControl(MyFontShow.inBackground);
+
+        //return viewList.get(mNum);
+        return view;
     }
 
-    private void findViewSmall(){
-        mLayout = (RelativeLayout) viewFontSmall.findViewById(R.id.main_layout);
-        mTxtAppName = (TextView)viewFontSmall.findViewById(R.id.app_name);
-        mTxtAppSize = (TextView)viewFontSmall.findViewById(R.id.app_size);
-        mTxtStorageTitle = (TextView)viewFontSmall.findViewById(R.id.storage_title);
-        mTxtStorageTotal = (TextView)viewFontSmall.findViewById(R.id.total_size_prefix);
-        mTxtStorageApp = (TextView)viewFontSmall.findViewById(R.id.application_size_prefix);
-        mTxtStorageUsbStorageApp = (TextView)viewFontSmall.findViewById(R.id.external_code_size_prefix);
-        mTxtStorageData = (TextView)viewFontSmall.findViewById(R.id.data_size_prefix);
-        mTxtStorageUsbStorageData = (TextView)viewFontSmall.findViewById(R.id.external_data_size_prefix);
-        mTxtStorageTotalText = (TextView)viewFontSmall.findViewById(R.id.total_size_text);
-        mTxtStorageAppText = (TextView)viewFontSmall.findViewById(R.id.application_size_text);
-        mTxtStorageUsbStorageAppText = (TextView)viewFontSmall.findViewById(R.id.external_code_size_text);
-        mTxtStorageDataText = (TextView)viewFontSmall.findViewById(R.id.data_size_text);
-        mTxtStorageUsbStorageDataText = (TextView)viewFontSmall.findViewById(R.id.external_data_size_text);
-        mTxtCacheTitle = (TextView)viewFontSmall.findViewById(R.id.cache_header);
-        mTxtCache1 = (TextView)viewFontSmall.findViewById(R.id.cache_child);
-        mTxtCache1Text = (TextView)viewFontSmall.findViewById(R.id.cache_size_text);
-        mTxtLaunchTitle = (TextView)viewFontSmall.findViewById(R.id.auto_launch_title);
-        mTxtLaunch1 = (TextView)viewFontSmall.findViewById(R.id.auto_launch);
-        mTxtPermissionTitle = (TextView)viewFontSmall.findViewById(R.id.permiss_title);
-        mTxtPermissionMsg = (TextView)viewFontSmall.findViewById(R.id.security_settings_billing_desc);
-        mTxtPermission1 = (TextView)viewFontSmall.findViewById(R.id.permiss_1);
-        mTxtPermission2 = (TextView)viewFontSmall.findViewById(R.id.permiss_2);
+    private void findView(){
+        mLayout = (ScrollView) view.findViewById(R.id.app_show);
+        mTxtAppName = (TextView)view.findViewById(R.id.app_name);
+        mTxtAppSize = (TextView)view.findViewById(R.id.app_size);
+        mTxtStorageTitle = (TextView)view.findViewById(R.id.storage_title);
+        mTxtStorageTotal = (TextView)view.findViewById(R.id.total_size_prefix);
+        mTxtStorageApp = (TextView)view.findViewById(R.id.application_size_prefix);
+        mTxtStorageUsbStorageApp = (TextView)view.findViewById(R.id.external_code_size_prefix);
+        mTxtStorageData = (TextView)view.findViewById(R.id.data_size_prefix);
+        mTxtStorageUsbStorageData = (TextView)view.findViewById(R.id.external_data_size_prefix);
+        mTxtStorageTotalText = (TextView)view.findViewById(R.id.total_size_text);
+        mTxtStorageAppText = (TextView)view.findViewById(R.id.application_size_text);
+        mTxtStorageUsbStorageAppText = (TextView)view.findViewById(R.id.external_code_size_text);
+        mTxtStorageDataText = (TextView)view.findViewById(R.id.data_size_text);
+        mTxtStorageUsbStorageDataText = (TextView)view.findViewById(R.id.external_data_size_text);
+        mTxtCacheTitle = (TextView)view.findViewById(R.id.cache_header);
+        mTxtCache1 = (TextView)view.findViewById(R.id.cache_child);
+        mTxtCache1Text = (TextView)view.findViewById(R.id.cache_size_text);
+        mTxtLaunchTitle = (TextView)view.findViewById(R.id.auto_launch_title);
+        mTxtLaunch1 = (TextView)view.findViewById(R.id.auto_launch);
+        mTxtPermissionTitle = (TextView)view.findViewById(R.id.permiss_title);
+        mTxtPermissionMsg = (TextView)view.findViewById(R.id.security_settings_billing_desc);
+        mTxtPermission1 = (TextView)view.findViewById(R.id.permiss_1);
+        mTxtPermission2 = (TextView)view.findViewById(R.id.permiss_2);
 
-        mBtnFirstTwoBtnLeft = (Button)viewFontSmall.findViewById(R.id.two_1_left_button);
-        mBtnFirstTwoBtnRight = (Button)viewFontSmall.findViewById(R.id.two_1_right_button);
-        mBtnSecondTwoBtnLeft = (Button)viewFontSmall.findViewById(R.id.two_2_left_button);
-        mBtnSecondTwoBtnRight = (Button)viewFontSmall.findViewById(R.id.two_2_right_button);
-        mBtnCacheClear = (Button)viewFontSmall.findViewById(R.id.clear_cache_button);
-        mBtnLaunchClear = (Button)viewFontSmall.findViewById(R.id.clear_activities_button);
+        mBtnFirstTwoBtnLeft = (Button)view.findViewById(R.id.two_1_left_button);
+        mBtnFirstTwoBtnRight = (Button)view.findViewById(R.id.two_1_right_button);
+        mBtnSecondTwoBtnLeft = (Button)view.findViewById(R.id.two_2_left_button);
+        mBtnSecondTwoBtnRight = (Button)view.findViewById(R.id.two_2_right_button);
+        mBtnCacheClear = (Button)view.findViewById(R.id.clear_cache_button);
+        mBtnLaunchClear = (Button)view.findViewById(R.id.clear_activities_button);
 
-        mCheckBtn = (CheckBox)viewFontSmall.findViewById(R.id.notification_switch);
+        mCheckBtn = (CheckBox)view.findViewById(R.id.notification_switch);
     }
 
 
@@ -142,7 +130,6 @@ public class MyFragment extends Fragment {
         //判斷接收背景顏色資料
         if (background) {
             mLayout.setBackgroundColor(Color.WHITE);
-            //mViewPager.setBackgroundColor(Color.WHITE);
 
             mTxtAppName.setTextColor(Color.BLACK);
             mTxtAppSize.setTextColor(Color.BLACK);
@@ -177,7 +164,6 @@ public class MyFragment extends Fragment {
             mCheckBtn.setTextColor(Color.BLACK);
         } else {
             mLayout.setBackgroundColor(Color.BLACK);
-            //mViewPager.setBackgroundColor(Color.BLACK);
 
             mTxtAppName.setTextColor(Color.WHITE);
             mTxtAppSize.setTextColor(Color.WHITE);
