@@ -18,7 +18,16 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="opencsv-2.3" level="project" />
+    <orderEntry type="library" exported="" name="opencsv-2.3" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://D:/android-sdks/extras/android/support/v4/android-support-v4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

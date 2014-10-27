@@ -21,11 +21,6 @@
       </config>
     </shared>
     <layouts>
-      <layout url="file://$PROJECT_DIR$/res/layout/gui_test1.xml">
-        <config>
-          <theme>@android:style/Theme</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/res/layout/main.xml">
         <config>
           <theme>@android:style/Theme.Holo</theme>
@@ -60,41 +55,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyActivity.java">
+      <file leaf-file-name="MyFontShow.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyFontShow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3882353" vertical-offset="0" max-vertical-offset="19635">
-              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.88235295" vertical-offset="63" max-vertical-offset="10395">
+              <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
               <folding>
-                <element signature="e#13218#13753#0" expanded="true" />
-                <element signature="e#13395#13414#0" expanded="true" />
-                <element signature="e#13611#13630#0" expanded="true" />
-                <element signature="e#13746#13747#0" expanded="true" />
-                <element signature="e#21665#21683#0" expanded="true" />
-                <element signature="e#23680#23708#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1607#1617#0" expanded="true" />
+                <element signature="e#3283#3970#0" expanded="true" />
+                <element signature="e#3951#3952#0" expanded="true" />
+                <element signature="e#4041#4727#0" expanded="true" />
+                <element signature="e#4708#4709#0" expanded="true" />
+                <element signature="e#4798#5484#0" expanded="true" />
+                <element signature="e#5465#5466#0" expanded="true" />
+                <element signature="e#5555#6241#0" expanded="true" />
+                <element signature="e#6222#6223#0" expanded="true" />
+                <element signature="e#6279#6965#0" expanded="true" />
+                <element signature="e#6946#6947#0" expanded="true" />
+                <element signature="e#7025#7711#0" expanded="true" />
+                <element signature="e#7692#7693#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_sp2.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main_sp2.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="683" max-vertical-offset="4515">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
+      <file leaf-file-name="MyFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1337" max-vertical-offset="4641">
+              <caret line="83" column="57" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+      <file leaf-file-name="test.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/test.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="315">
+              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -110,14 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/FontEasyRead/MyTypeFace.java" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
-        <option value="$PROJECT_DIR$/project.properties" />
-        <option value="$PROJECT_DIR$/res/layout/gui_testmother.xml" />
-        <option value="$PROJECT_DIR$/res/layout/test_guilist.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/FontEasyRead/OpationActivity.java" />
-        <option value="$PROJECT_DIR$/assets/texts/FontEasyRead_example.html" />
-        <option value="$PROJECT_DIR$/res/layout/gui_test1.xml" />
         <option value="$PROJECT_DIR$/src/com/example/FontEasyRead/OptionActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/manage_applications_apps.xml" />
         <option value="$PROJECT_DIR$/res/layout/fontshow.xml" />
@@ -132,14 +129,43 @@
         <option value="$PROJECT_DIR$/res/drawable/wifi_signal_light.xml" />
         <option value="$PROJECT_DIR$/res/layout/two_buttons_panel.xml" />
         <option value="$PROJECT_DIR$/res/layout/two_buttons_panel2.xml" />
-        <option value="$PROJECT_DIR$/res/layout/installed_app_details.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/FontEasyRead/MyFontShow.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" />
         <option value="$PROJECT_DIR$/res/values-zh-rTW/strings.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main_sp2.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/example/FontEasyRead/MyActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main_sp2.xml" />
+        <option value="$PROJECT_DIR$/res/layout/installed_app_details.xml" />
+        <option value="$PROJECT_DIR$/res/layout/two_buttons_panel_small_2.xml" />
+        <option value="$PROJECT_DIR$/res/anim/push_left_in.html" />
+        <option value="$PROJECT_DIR$/res/layout/font_show.xml" />
+        <option value="$PROJECT_DIR$/res/anim/push_left_in.xml" />
+        <option value="$PROJECT_DIR$/res/anim/push_right_out.xml" />
+        <option value="$PROJECT_DIR$/res/anim/push_right_in.xml" />
+        <option value="$PROJECT_DIR$/res/anim/push_left_out.xml" />
+        <option value="$PROJECT_DIR$/res/layout/installed_app_details_normal.xml" />
+        <option value="$PROJECT_DIR$/res/layout/test_fontshow.xml" />
+        <option value="$PROJECT_DIR$/res/layout/test_fontshow_2.xml" />
+        <option value="$PROJECT_DIR$/res/layout/font_show_small.xml" />
+        <option value="$PROJECT_DIR$/res/layout/test2.xml" />
+        <option value="$PROJECT_DIR$/res/layout/font_show_normal.xml" />
+        <option value="$PROJECT_DIR$/res/layout/test222.xml" />
+        <option value="$PROJECT_DIR$/res/layout/abcde.xml" />
+        <option value="$PROJECT_DIR$/res/layout/two_buttons_panel_normal.xml" />
+        <option value="$PROJECT_DIR$/res/layout/two_buttons_panel_normal_2.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_pagper_list.xml" />
+        <option value="$PROJECT_DIR$/res/layout/two_buttons_panel_large.xml" />
+        <option value="$PROJECT_DIR$/res/layout/two_buttons_panel_large_2.xml" />
+        <option value="$PROJECT_DIR$/res/layout/two_buttons_panel_small.xml" />
+        <option value="$PROJECT_DIR$/res/layout/installed_app_details_small.xml" />
+        <option value="$PROJECT_DIR$/res/layout/installed_app_details_large.xml" />
+        <option value="$PROJECT_DIR$/res/layout/manage_applications_item_small.xml" />
+        <option value="$PROJECT_DIR$/res/layout/manage_applications_item_large.xml" />
+        <option value="$PROJECT_DIR$/res/layout/test.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/FontEasyRead/MyFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/example/FontEasyRead/MyFragmentPageAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/example/FontEasyRead/MyFontShow.java" />
       </list>
     </option>
   </component>
@@ -194,14 +220,18 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="FontEasyRead" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -260,25 +290,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="values-zh-rTW" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FontEasyRead" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FontEasyRead_sp2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -316,20 +328,21 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="FullScreen" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/CSV lib/opencsv-2.3/deploy/opencsv-2.3.jar!/" />
+    <property name="last_opened_file_path" value="D:/android-sdks/extras/android/support/v4/android-support-v4.jar!/" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="569" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="androidWear" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Brian\GitHub\FontEasyRead_sp2\res\layout" />
+      <recent name="D:\Brian\GitHub\FontEasyRead_sp2\res\anim" />
       <recent name="D:\Brian\GitHub\FontEasyRead_sp2\res\drawable-hdpi" />
       <recent name="D:\Brian\GitHub\FontEasyRead_sp2\res\drawable-mdpi" />
       <recent name="D:\Brian\GitHub\FontEasyRead_sp2\res\drawable" />
-      <recent name="D:\Brian\GitHub\FontEasyRead_sp2\res\layout" />
-      <recent name="D:\Brian\GitHub\FontEasyRead_sp2\res\values" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Brian\GitHub\FontEasyRead_sp2\res\drawable-xhdpi" />
@@ -566,133 +579,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/texts/FontEasyRead_example.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="189">
-          <caret line="2" column="201" selection-start-line="2" selection-start-column="201" selection-end-line="2" selection-end-column="201" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="798">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2389" max-vertical-offset="6195">
-          <caret line="122" column="48" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
-          <folding>
-            <element signature="e#13218#13753#0" expanded="true" />
-            <element signature="e#13395#13414#0" expanded="true" />
-            <element signature="e#13611#13630#0" expanded="true" />
-            <element signature="e#13746#13747#0" expanded="true" />
-            <element signature="e#21665#21683#0" expanded="true" />
-            <element signature="e#23680#23708#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="483">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="798">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7014">
-          <caret line="314" column="0" selection-start-line="290" selection-start-column="9" selection-end-line="314" selection-end-column="0" />
-          <folding>
-            <element signature="e#13218#13753#0" expanded="true" />
-            <element signature="e#13395#13414#0" expanded="true" />
-            <element signature="e#13611#13630#0" expanded="true" />
-            <element signature="e#13746#13747#0" expanded="true" />
-            <element signature="e#21665#21683#0" expanded="true" />
-            <element signature="e#23680#23708#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="483">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="798">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5649" max-vertical-offset="6573">
-          <caret line="290" column="9" selection-start-line="290" selection-start-column="9" selection-end-line="290" selection-end-column="9" />
-          <folding>
-            <element signature="e#13218#13753#0" expanded="true" />
-            <element signature="e#13395#13414#0" expanded="true" />
-            <element signature="e#13611#13630#0" expanded="true" />
-            <element signature="e#13746#13747#0" expanded="true" />
-            <element signature="e#21665#21683#0" expanded="true" />
-            <element signature="e#23680#23708#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="798">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4399" max-vertical-offset="6342">
-          <caret line="253" column="20" selection-start-line="253" selection-start-column="20" selection-end-line="253" selection-end-column="20" />
-          <folding>
-            <element signature="e#13218#13753#0" expanded="true" />
-            <element signature="e#13395#13414#0" expanded="true" />
-            <element signature="e#13611#13630#0" expanded="true" />
-            <element signature="e#13746#13747#0" expanded="true" />
-            <element signature="e#21665#21683#0" expanded="true" />
-            <element signature="e#23680#23708#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -700,7 +586,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="672">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5050505" vertical-offset="582" max-vertical-offset="1239">
           <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,28 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/test_fontshow.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/apn_preference_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33919156" vertical-offset="4574" max-vertical-offset="5397">
@@ -861,7 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4789916" vertical-offset="0" max-vertical-offset="833">
           <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -869,18 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4789916" vertical-offset="0" max-vertical-offset="833">
           <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/preference_inputmethod.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6960193" vertical-offset="1103" max-vertical-offset="1932">
-          <caret line="80" column="72" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -891,59 +740,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2263" max-vertical-offset="3570">
           <caret line="116" column="4" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/manage_applications_item.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="498" max-vertical-offset="1617">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/two_buttons_panel2.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="393" max-vertical-offset="1134">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/two_buttons_panel.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="573" max-vertical-offset="1134">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/installed_app_details.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="9198">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyFontShow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.9411764" vertical-offset="315" max-vertical-offset="9072">
-          <caret line="266" column="53" selection-start-line="266" selection-start-column="53" selection-end-line="266" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -971,6 +767,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.105882354" vertical-offset="0" max-vertical-offset="595">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="19572">
+          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main_sp2.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -982,25 +794,255 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+    <entry file="file://$PROJECT_DIR$/res/layout/preference_inputmethod_widget.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/preference_inputmethod.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3882353" vertical-offset="0" max-vertical-offset="19635">
-          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+        <state vertical-scroll-proportion="1.1032505" vertical-offset="1103" max-vertical-offset="1932">
+          <caret line="80" column="72" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/two_buttons_panel_small_2.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1134">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/anim/push_right_out.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29473683" vertical-offset="0" max-vertical-offset="570">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/anim/push_left_out.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29473683" vertical-offset="0" max-vertical-offset="570">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/anim/push_left_in.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29473683" vertical-offset="0" max-vertical-offset="570">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/anim/push_right_in.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29473683" vertical-offset="0" max-vertical-offset="570">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/two_buttons_panel_normal.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="573" max-vertical-offset="1134">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/two_buttons_panel_normal_2.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="393" max-vertical-offset="1134">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/apn_preference_layout.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/two_buttons_panel_large_2.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1134">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/two_buttons_panel_large.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1134">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/two_buttons_panel_small.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1134">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/manage_applications_item_small.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8945233" vertical-offset="861" max-vertical-offset="1617">
+          <caret line="62" column="65" selection-start-line="62" selection-start-column="65" selection-end-line="62" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/manage_applications_item_normal.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.030425964" vertical-offset="813" max-vertical-offset="1617">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/installed_app_details_large.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9177">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/installed_app_details_small.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8679" max-vertical-offset="9240">
+          <caret line="431" column="19" selection-start-line="24" selection-start-column="0" selection-end-line="431" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/manage_applications_item_large.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.88" vertical-offset="840" max-vertical-offset="1617">
+          <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/installed_app_details_normal.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6634" max-vertical-offset="9177">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="22" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/test.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="315">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyFragmentPageAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.91764706" vertical-offset="0" max-vertical-offset="714">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding>
-            <element signature="e#13218#13753#0" expanded="true" />
-            <element signature="e#13395#13414#0" expanded="true" />
-            <element signature="e#13611#13630#0" expanded="true" />
-            <element signature="e#13746#13747#0" expanded="true" />
-            <element signature="e#21665#21683#0" expanded="true" />
-            <element signature="e#23680#23708#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1211" max-vertical-offset="4641">
+          <caret line="83" column="57" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/FontEasyRead/MyFontShow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.88235295" vertical-offset="63" max-vertical-offset="10395">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1607#1617#0" expanded="true" />
+            <element signature="e#3283#3970#0" expanded="true" />
+            <element signature="e#3951#3952#0" expanded="true" />
+            <element signature="e#4041#4727#0" expanded="true" />
+            <element signature="e#4708#4709#0" expanded="true" />
+            <element signature="e#4798#5484#0" expanded="true" />
+            <element signature="e#5465#5466#0" expanded="true" />
+            <element signature="e#5555#6241#0" expanded="true" />
+            <element signature="e#6222#6223#0" expanded="true" />
+            <element signature="e#6279#6965#0" expanded="true" />
+            <element signature="e#6946#6947#0" expanded="true" />
+            <element signature="e#7025#7711#0" expanded="true" />
+            <element signature="e#7692#7693#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1056,7 +1098,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>Android API 20 Platform</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

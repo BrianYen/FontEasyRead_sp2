@@ -5,22 +5,33 @@ import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.method.ScrollingMovementMethod;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.*;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.Semaphore;
 
 /**
+ * fragment 要分3張
+ *
+ *
+ * https://www.google.com.tw/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=android+viewpager+fragment&tbs=qdr:y&start=20
+ * http://men4661273.iteye.com/blog/2122885
+ * http://www.360doc.com/content/13/1115/23/14218823_329557474.shtml
+ * https://github.com/codepath/android_guides/wiki/ViewPager-with-FragmentPagerAdapter
+ * http://www.it165.net/pro/html/201310/7454.html
+ *
  * Created by Brian on 2014/10/21.
  *
  */
-public class MyFontShow extends Activity {
+public class MyFontShow extends FragmentActivity {
 
     private String[] mTypefaceTable = {
             "fonts/gjxh00l-noh.ttf",        //Light font
@@ -40,7 +51,10 @@ public class MyFontShow extends Activity {
             mTypefaceTable.length
     );
 
-    private ScrollView mLayout;
+    //private ScrollView mLayout;
+    private RelativeLayout mLayout;
+    private MyFragmentPageAdapter mAdapter;
+    private ViewPager mViewPager;
 
     private TextView mTxtAppName;
     private TextView mTxtAppSize;
@@ -73,10 +87,6 @@ public class MyFontShow extends Activity {
     private Button mBtnLaunchClear;
 
     private CheckBox mCheckBtn;
-
-
-
-
 
     //Typeface initializer
     public void typefacesInit(AssetManager am) {
@@ -244,10 +254,12 @@ public class MyFontShow extends Activity {
 
     }
     */
+
     private void backgroundColorControl(boolean background){
         //判斷接收背景顏色資料
         if (background) {
             mLayout.setBackgroundColor(Color.WHITE);
+            //mViewPager.setBackgroundColor(Color.WHITE);
 
             mTxtAppName.setTextColor(Color.BLACK);
             mTxtAppSize.setTextColor(Color.BLACK);
@@ -282,6 +294,7 @@ public class MyFontShow extends Activity {
             mCheckBtn.setTextColor(Color.BLACK);
         } else {
             mLayout.setBackgroundColor(Color.BLACK);
+            //mViewPager.setBackgroundColor(Color.BLACK);
 
             mTxtAppName.setTextColor(Color.WHITE);
             mTxtAppSize.setTextColor(Color.WHITE);
@@ -387,7 +400,8 @@ public class MyFontShow extends Activity {
         mCheckBtn.setTypeface(tf);
     }
     private void findView(){
-        mLayout = (ScrollView) findViewById(R.id.app_show);
+        //mLayout = (ScrollView) findViewById(R.id.app_show);
+        mLayout = (RelativeLayout) findViewById(R.id.main_layout);
         mTxtAppName = (TextView)findViewById(R.id.app_name);
         mTxtAppSize = (TextView)findViewById(R.id.app_size);
         mTxtStorageTitle = (TextView)findViewById(R.id.storage_title);
@@ -424,29 +438,52 @@ public class MyFontShow extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.installed_app_details);
+        //setContentView(R.layout.installed_app_details_normal);
+        setContentView(R.layout.test);
+
+        mViewPager = (ViewPager) findViewById(R.id.viewpager);      //add by v1.1.7
+
+        //為了支持3.0以下版本，需繼承FragmentActivity，通過getSupportFragmentManager()獲取FragmentManager
+        //3.0及其以上版本，只需繼承Activity，通過getFragmentManager獲取事件
+        FragmentManager fm = getSupportFragmentManager();
+        //初始化自訂義篩選器
+        mAdapter =  new MyFragmentPageAdapter(fm);
+
+        //設置篩選器
+        mViewPager.setAdapter(mAdapter);
+
+        //設定默認主畫面
+        mViewPager.setCurrentItem(1);       //normal
+
+
 
         //findView
         findView();
 
         //初始化Typeface
-        typefacesInit(getAssets());       //mask by v1.0.1 begin
+        //typefacesInit(getAssets());       //mask by v1.0.1 begin
         //初始設定Typeface
-        fontTypefaceInit();
+        //fontTypefaceInit();
 
-        //接收資料
+        //接收設定資料
         Bundle bundle = getIntent().getExtras();
         int inFontWeight = bundle.getInt("fontWeight");
         boolean inBackground = bundle.getBoolean("background");
 
         //讀取檔案
-        //loadFile();
+        //loadFile();       //mask by v1.1.5
 
         //更改背景
         backgroundColorControl(inBackground);
 
         //更改font typeface
-        fontTypefaceControl(inFontWeight);
+//        fontTypefaceControl(inFontWeight);
+
+
+
+
+
+
 
     }
 }

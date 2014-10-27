@@ -29,7 +29,7 @@ public class MyActivity extends Activity implements
 	 *
      * 2014/10/22   brian   v1.1.6  1.add android UI
      *                              2.change background button
-     *                              
+     *
      * 2014/10/20   brian   v1.1.5  1.change used font
      *                              2.change GUI
      *
