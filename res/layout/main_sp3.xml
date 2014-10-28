@@ -3,7 +3,7 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              android:id="@+id/mApp">
+              android:id="@+id/mApp" android:background="#1d1d1d">
     <TableLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/layout_btn_sub"
                     android:id="@+id/btn_subFontWeight" android:layout_column="1"
-                    android:maxWidth="70dp"/>
+                    android:maxWidth="70dp" android:minHeight="60dp"/>
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -154,7 +154,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/layout_btn_add"
                     android:id="@+id/btn_addFontWeight" android:layout_column="3"
-                    android:maxWidth="70dp"/>
+                    android:maxWidth="70dp" android:minHeight="60dp"/>
         </TableRow>
         <TableRow
                 android:layout_width="wrap_content"
@@ -173,7 +173,8 @@
                     android:id="@+id/btn_background" android:layout_column="3" android:checked="true"
                     android:textOn="@string/back_black"
                     android:textOff="@string/back_white"
-                    android:textSize="18sp" android:maxWidth="70dp" android:textColor="@color/black"/>
+                    android:textSize="18sp" android:maxWidth="70dp" android:textColor="@color/black"
+                    android:minHeight="60dp"/>
         </TableRow>
         <TableRow
                 android:layout_width="wrap_content"
@@ -192,7 +193,8 @@
                     android:id="@+id/toggleButton"
                     android:longClickable="false"
                     android:checked="true" android:layout_column="3"
-                    android:textSize="18sp" android:maxWidth="70dp" android:textColor="#ff00ff00"/>
+                    android:textSize="18sp" android:maxWidth="70dp" android:textColor="#ff00ff00"
+                    android:minHeight="60dp"/>
         </TableRow>
         <TableRow
                 android:layout_width="wrap_content"
@@ -209,7 +211,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/btn_save"
                     android:id="@+id/btn_save"
-                    android:layout_column="3" android:maxWidth="70dp"/>
+                    android:layout_column="3" android:maxWidth="70dp" android:minHeight="60dp"/>
         </TableRow>
     </TableLayout>
     <Button
@@ -218,6 +220,6 @@
             android:text="@string/btn_preview"
             android:id="@+id/btn_show"
             android:layout_below="@+id/tableLayout2" android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp" android:textSize="22sp"/>
+            android:layout_marginTop="20dp" android:textSize="22sp" android:minHeight="60dp"/>
 </RelativeLayout>
 

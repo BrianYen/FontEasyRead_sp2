@@ -95,6 +95,26 @@ public class MyFragment_FontNormal extends Fragment {
     /*add by v1.1.7.2 begin*/
     //設定font typeface
     private void fontTypefaceControl(int fontWeight){
+        /*add by v1.1.7.3 begin*/
+        int btnFontWeight,txtSmallStringFontWeight;
+
+        //判斷頭尾，避免崩潰
+        if (fontWeight == 0) {
+            txtSmallStringFontWeight = fontWeight;
+            btnFontWeight = fontWeight + 1;
+        } else if (fontWeight == MyActivity.mTypefaceTable.length - 1) {
+            btnFontWeight = MyActivity.mTypefaceTable.length - 1;
+            txtSmallStringFontWeight = fontWeight - 1;
+
+        } else {
+            btnFontWeight = fontWeight + 1;
+            txtSmallStringFontWeight = fontWeight - 1;
+        }
+        /*add by v1.1.7.3 begin*/
+        //Log.d("Arphic Log :","font weight :"+String.valueOf(fontWeight));
+        //Log.d("Arphic Log :","font weight Btn :"+String.valueOf(btnFontWeight));
+        //Log.d("Arphic Log :","font weight Txt :"+String.valueOf(txtSmallStringFontWeight));
+
         //設定接收font weight資料
         mTxtAppName.setTypeface(MyActivity.mTypefaces.get(fontWeight));
         mTxtAppSize.setTypeface(MyActivity.mTypefaces.get(fontWeight));
@@ -113,8 +133,9 @@ public class MyFragment_FontNormal extends Fragment {
         mTxtCache1.setTypeface(MyActivity.mTypefaces.get(fontWeight));
         mTxtCache1Text.setTypeface(MyActivity.mTypefaces.get(fontWeight));
         mTxtLaunchTitle.setTypeface(MyActivity.mTypefaces.get(fontWeight));
-        mTxtLaunch1.setTypeface(MyActivity.mTypefaces.get(fontWeight));
         mTxtPermissionTitle.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        /* mask by v1.1.7.3 begin
+        mTxtLaunch1.setTypeface(MyActivity.mTypefaces.get(fontWeight));
         mTxtPermissionMsg.setTypeface(MyActivity.mTypefaces.get(fontWeight));
         mTxtPermission1.setTypeface(MyActivity.mTypefaces.get(fontWeight));
         mTxtPermission2.setTypeface(MyActivity.mTypefaces.get(fontWeight));
@@ -125,6 +146,23 @@ public class MyFragment_FontNormal extends Fragment {
         mBtnSecondTwoBtnRight.setTypeface(MyActivity.mTypefaces.get(fontWeight));
         mBtnCacheClear.setTypeface(MyActivity.mTypefaces.get(fontWeight));
         mBtnLaunchClear.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mask by v1.1.7.3 end*/
+
+        /*add by v1.1.7.3 begin*/
+        //small font
+        mTxtLaunch1.setTypeface(MyActivity.mTypefaces.get(txtSmallStringFontWeight));
+        mTxtPermissionMsg.setTypeface(MyActivity.mTypefaces.get(txtSmallStringFontWeight));
+        mTxtPermission1.setTypeface(MyActivity.mTypefaces.get(txtSmallStringFontWeight));
+        mTxtPermission2.setTypeface(MyActivity.mTypefaces.get(txtSmallStringFontWeight));
+
+        //btn
+        mBtnFirstTwoBtnLeft.setTypeface(MyActivity.mTypefaces.get(btnFontWeight));
+        mBtnFirstTwoBtnRight.setTypeface(MyActivity.mTypefaces.get(btnFontWeight));
+        mBtnSecondTwoBtnLeft.setTypeface(MyActivity.mTypefaces.get(btnFontWeight));
+        mBtnSecondTwoBtnRight.setTypeface(MyActivity.mTypefaces.get(btnFontWeight));
+        mBtnCacheClear.setTypeface(MyActivity.mTypefaces.get(btnFontWeight));
+        mBtnLaunchClear.setTypeface(MyActivity.mTypefaces.get(btnFontWeight));
+        /*add by v1.1.7.3 end*/
 
         mCheckBtn.setTypeface(MyActivity.mTypefaces.get(fontWeight));
     }

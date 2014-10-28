@@ -31,6 +31,7 @@ public class MyActivity extends Activity implements
         SensorEventListener {
     /**
      *
+     * 2014/10/28   brian   v1.1.7.3    1.control fragment Btn,Txt font weight
      *
 	 * 2014/10/28   brian   v1.1.7.2    1.create fragment change font weight module
      *                                  2.change main layout color
