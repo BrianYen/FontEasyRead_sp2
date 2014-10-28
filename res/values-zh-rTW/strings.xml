@@ -25,7 +25,7 @@
     <string name="light_text">"( 0 ~ 255 勒克斯)"</string>
     <string name="font_weight_text">"( 6 模式 )"</string>
     <string name="background_text">"( 2 模式 )"</string>
-    <string name="light_auto">"自動調整螢幕亮度 : "</string>
+    <string name="light_auto">"自動調整\n螢幕亮度 : "</string>
     <string name="save_info">"儲存設定資訊 : "</string>
     <string name="btn_preview">"預覽"</string>
     <string name="btn_save">"儲存"</string>

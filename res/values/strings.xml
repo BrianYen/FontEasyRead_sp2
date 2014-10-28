@@ -21,22 +21,25 @@
     <!-- String for main layout change background clolor -->
     <string name="back_white">White</string>
     <string name="back_black">Black</string>
-    <string name="light">Brightness : </string>
-    <string name="font_weight">Font Weight : </string>
-    <string name="background">Back Ground : </string>
+    <string name="light">"Brightness    :"</string>
+    <string name="font_weight">"Font Weight  :"</string>
+    <string name="background">"Back Ground :"</string>
     <string name="light_text">( 0 ~ 255 Lux)</string>
     <string name="font_weight_text">( 6 mode )</string>
     <string name="background_text">( 2 mode )</string>
-    <string name="light_auto">Brightness Auto : </string>
-    <string name="save_info">Save Information : </string>
+    <string name="light_auto">Brightness Auto :</string>
+    <string name="save_info">Save Information :</string>
     <string name="btn_preview">Preview</string>
     <string name="btn_save">Save</string>
     <string name="light_msg">AUTO</string>
 
 <!-- App main EN end -->
 <!-- App show EN -->
-    <string name="app_name_show">FontEasyRead App info Demo</string>
+    <string name="app_name_show">FontEasyRead App Info Demo</string>
     <string name="demo_app_name">App Name</string>
+    <string name="layout_btn_add">"+"</string>
+    <string name="layout_btn_sub">"-"</string>
+    <string name="Layout_txt_msg">New Text</string>
 
     <!-- Spoken description for IME settings image button [CHAR LIMIT=NONE] -->
     <string name="input_method_settings_button">Settings</string>

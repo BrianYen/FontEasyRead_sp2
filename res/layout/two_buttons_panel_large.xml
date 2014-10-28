@@ -30,7 +30,7 @@
             android:layout_width="120dip"
             android:layout_weight="0.4"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical" android:text="@string/two_btn_left" android:textSize="18dp"/>
+            android:layout_gravity="center_vertical" android:text="@string/two_btn_left" android:textSize="22sp"/>
         <!-- Spacer -->
         <View
             android:id="@+id/buttons_spacer_left"
@@ -44,5 +44,5 @@
             android:text="@string/cancel"
             android:layout_weight="0.4"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical" android:textSize="18dp"/>
+            android:layout_gravity="center_vertical" android:textSize="22sp"/>
 </LinearLayout>

@@ -81,24 +81,54 @@ public class MyFragment_FontNormal extends Fragment {
         tv.setText("fragment+" + mNum);
         */
         //指向畫面位址
-//        viewFontSmall = inflater.inflate(R.layout.installed_app_details_small, null);
-//        viewFontNormal = inflater.inflate(R.layout.installed_app_details_normal, null);
         view = inflater.inflate(R.layout.installed_app_details_normal, null);
-//        viewFontLarge = inflater.inflate(R.layout.installed_app_details_large, null);
-        //添加畫面資料
-//        viewList = new ArrayList<View>();
-//        viewList.add(viewFontSmall);
-//        viewList.add(viewFontNormal);
-//        viewList.add(viewFontLarge);
 
         findView();
         //Log.d("Arphic Log",String.valueOf(MyFontShow.inBackground));
+        //設定背景色
         backgroundColorControl(MyFontShow.inBackground);
+        //更改font typeface
+        fontTypefaceControl(MyFontShow.inFontWeight);        //mask by v1.1.7.1
 
-        //return viewList.get(mNum);
         return view;
     }
+    /*add by v1.1.7.2 begin*/
+    //設定font typeface
+    private void fontTypefaceControl(int fontWeight){
+        //設定接收font weight資料
+        mTxtAppName.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtAppSize.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtStorageTitle.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtStorageTotal.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtStorageApp.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtStorageUsbStorageApp.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtStorageData.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtStorageUsbStorageData.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtStorageTotalText.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtStorageAppText.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtStorageUsbStorageAppText.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtStorageDataText.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtStorageUsbStorageDataText.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtCacheTitle.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtCache1.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtCache1Text.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtLaunchTitle.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtLaunch1.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtPermissionTitle.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtPermissionMsg.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtPermission1.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mTxtPermission2.setTypeface(MyActivity.mTypefaces.get(fontWeight));
 
+        mBtnFirstTwoBtnLeft.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mBtnFirstTwoBtnRight.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mBtnSecondTwoBtnLeft.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mBtnSecondTwoBtnRight.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mBtnCacheClear.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+        mBtnLaunchClear.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+
+        mCheckBtn.setTypeface(MyActivity.mTypefaces.get(fontWeight));
+    }
+    /*add by v1.1.7.2 end*/
     private void findView() {
         mLayout = (ScrollView) view.findViewById(R.id.app_show);
         mTxtAppName = (TextView)view.findViewById(R.id.app_name);
@@ -133,8 +163,7 @@ public class MyFragment_FontNormal extends Fragment {
 
         mCheckBtn = (CheckBox)view.findViewById(R.id.notification_switch);
     }
-
-
+    //設定背景色
     private void backgroundColorControl(boolean background){
         //判斷接收背景顏色資料
         if (background) {
