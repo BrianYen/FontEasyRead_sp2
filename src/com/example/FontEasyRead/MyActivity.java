@@ -31,6 +31,7 @@ public class MyActivity extends Activity implements
         SensorEventListener {
     /**
      *
+     * 2014/10/29   brian   v1.1.7.4    1.fix font demi bold set typeface error
      * 2014/10/28   brian   v1.1.7.3    1.control fragment Btn,Txt font weight
      *
 	 * 2014/10/28   brian   v1.1.7.2    1.create fragment change font weight module
@@ -60,7 +61,8 @@ public class MyActivity extends Activity implements
     public static String[] mTypefaceTable = {
             "fonts/gjxh00l-noh.ttf",        //Light font
             "fonts/gjxh00m_noh.ttf",
-            "fonts/gjxh00db_noh.ttf",
+            //"fonts/gjxh00db_noh.ttf",     //mask by v1.1.7.4
+            "fonts/gjxh0db_noh.ttf",        //add by v1.1.7.4
             "fonts/gjxh00b_noh.ttf",
             "fonts/gjxh0eb_noh.ttf",
             "fonts/gjxh00h_noh.ttf"
