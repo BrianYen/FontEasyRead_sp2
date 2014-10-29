@@ -947,7 +947,7 @@ public class MyActivity extends Activity implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.main);
-        setContentView(R.layout.main_sp3);
+        setContentView(R.layout.main_sp4);
 
         //初始化Typeface
         typefacesInit(getAssets());

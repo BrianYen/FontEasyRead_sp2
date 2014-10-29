@@ -24,7 +24,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_show_defaultLight" android:layout_column="1"
                     android:textColor="#669933" android:paddingLeft="5dp" android:paddingRight="5dp"
-                    android:textSize="16sp" android:text="@string/Layout_txt_msg"/>
+                    android:textSize="16sp" android:text="@string/layout_txt_msg"/>
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_show_fontWidth" android:layout_column="1"
                     android:textColor="#669933" android:paddingLeft="5dp" android:paddingRight="5dp"
-                    android:textSize="16sp" android:text="@string/Layout_txt_msg"/>
+                    android:textSize="16sp" android:text="@string/layout_txt_msg"/>
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -148,7 +148,7 @@
                     android:layout_column="2" android:gravity="center" android:id="@+id/txt_showFontWeight"
                     android:textColor="#669933" android:textSize="16sp"
                     android:paddingLeft="5dp" android:paddingRight="5dp" android:minWidth="90dp"
-                    android:text="@string/Layout_txt_msg"/>
+                    android:text="@string/layout_txt_msg"/>
             <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -39,7 +39,7 @@
     <string name="demo_app_name">App Name</string>
     <string name="layout_btn_add">"+"</string>
     <string name="layout_btn_sub">"-"</string>
-    <string name="Layout_txt_msg">New Text</string>
+    <string name="layout_txt_msg">New Text</string>
 
     <!-- Spoken description for IME settings image button [CHAR LIMIT=NONE] -->
     <string name="input_method_settings_button">Settings</string>
