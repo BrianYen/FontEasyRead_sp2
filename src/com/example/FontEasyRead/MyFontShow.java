@@ -1,14 +1,11 @@
 package com.example.FontEasyRead;
 
-import android.content.res.AssetManager;
-import android.graphics.Typeface;
+
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 
-import java.util.ArrayList;
-import java.util.concurrent.Semaphore;
 
 /**
  *
