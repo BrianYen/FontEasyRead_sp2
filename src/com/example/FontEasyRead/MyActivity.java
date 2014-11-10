@@ -31,6 +31,7 @@ public class MyActivity extends Activity implements
         SensorEventListener {
     /**
      *
+     * 2014/11/10   brian   v1.1.7.7    1.change UI (v1.1.7.5 - v1.1.7.7)
      * 2014/10/29   brian   v1.1.7.4    1.fix font demi bold set typeface error
      * 2014/10/28   brian   v1.1.7.3    1.control fragment Btn,Txt font weight
      *
